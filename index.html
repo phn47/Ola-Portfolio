@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ola | Raw Insights. Real Vibes.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: '#D4AF37',
+              'gold-light': '#F4CF57',
+              web3blue: '#0EA5E9',
+              web3purple: '#9333EA',
+              darkbg: '#050505',
+              cardbg: '#0A0A0A'
+            },
+            fontFamily: {
+              sora: ['Sora', 'sans-serif'],
+              inter: ['Inter', 'sans-serif'],
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'gold-sheen': 'linear-gradient(45deg, #D4AF37 0%, #F4CF57 50%, #D4AF37 100%)',
+            },
+            animation: {
+              'marquee': 'marquee 25s linear infinite',
+              'marquee-reverse': 'marquee-reverse 25s linear infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              'marquee-reverse': {
+                '0%': { transform: 'translateX(-50%)' },
+                '100%': { transform: 'translateX(0%)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px; /* Offset for fixed navbar */
+        scrollbar-gutter: stable; /* Prevents layout shift when scrollbar appears */
+      }
+      body {
+        background-color: #030303;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      
+      /* Film Grain Overlay */
+      .bg-noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Sora', sans-serif;
+      }
+      
+      /* Outline Text Utility */
+      .text-outline {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        color: transparent;
+      }
+      .text-outline-gold {
+        -webkit-text-stroke: 1px rgba(212, 175, 55, 0.5);
+        color: transparent;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "gsap": "https://aistudiocdn.com/gsap@3.12.5",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
